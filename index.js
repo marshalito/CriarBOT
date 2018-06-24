@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.js");
 const cors = require('chalk');
-var prefix = ("!")
+var prefix = config.prefix
 const fs = require('fs')
 
 bot.on('ready', () =>{
