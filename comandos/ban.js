@@ -14,8 +14,6 @@ module.exports.run = (bot, message, args) => {
   if (message.author.id === user.id) return message.reply("você não pode se banir.")
   message.guild.member(user).ban();
   message.reply("usuário **banido** com **sucesso**.").then(a=>a.delete(1500));
-  let modlog = bot.channels.find("name", "punições");
-  if (!modlog) return message.reply("Crie um canal chamado de `punições`, não altere nada do nome.");
   let role = message.guild.roles.find("name", "Dream")
   var embed = new Discord.RichEmbed()
         .setColor(role.color)
@@ -24,7 +22,7 @@ module.exports.run = (bot, message, args) => {
 **Motivo:** ${reason}
 **Punição aplicada:** Banimento`)
 
-  modlog.send(embed)
+  message.channel.send(embed)
 }
 module.exports.help = {
   name: "banir"
