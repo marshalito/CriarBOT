@@ -33,7 +33,10 @@ module.exports.run = async(bot, message, args) => {
         "Minha galinha não queria rir. Joguei ela do terceiro andar e ela rachou o bico...",
         "Qual o médico que é bem desligado?... O OFFtalmologista.",
         "Qual a comida que liga e desliga?... O StrogON-OFF.",
-        "O que acontece a uma Jiboia quando ela não sabe nadar?... Ela Jafunda"
+        "O que acontece a uma Jiboia quando ela não sabe nadar?... Ela Jafunda",
+        "Sabe por que o México tem os melhores encanadores do mundo? Porque eles são mexicanos. **Enviada por:** kaueePAPAI.",
+        "Por que o pato tem inveja do cachorro? Porque ele tem 4 patas. **Enviada por:** zRowPvP_.",
+        "Uma baleia deu um tiro em uma baleia. No jornal: Baleia baleia baleia. **Enviada por:** kaueePAPAI."
     ]
     var piada = Math.floor((Math.random() * piadas.length))
     message.channel.send(piadas[piada]);
