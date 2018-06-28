@@ -39,7 +39,19 @@ module.exports.run = async(bot, message, args) => {
         "Uma baleia deu um tiro em uma baleia. No jornal: Baleia baleia baleia. **Enviada por:** kaueePAPAI.",
         "O professor pergunta o Joãozinho: - Arroz é com S ou com Z? E o Joãozinho responde: - Aqui na escola eu não sei, mas lá em casa é com feijão. **Enviada por:** ComanCraftS.",
         "Se você mandar carta pros cachorros, apenas o hotvailer. **Enviada por:** ComanCraftS.",
-        "Tinha um policial e um bêbado, o policial perguntou pro bêbado: -Onde fica sua casa? E o bêbado respondeu: -Do lado da casa do meu vizinho. E o policial perguntou: -Onde fica a casa do seu vizinho? E o bêbado falou: -Se eu te falar você não vai acreditar -Fala logo. -Do lado da minha casa. **Enviada por:** ComanCraftS."
+        "Tinha um policial e um bêbado, o policial perguntou pro bêbado: -Onde fica sua casa? E o bêbado respondeu: -Do lado da casa do meu vizinho. E o policial perguntou: -Onde fica a casa do seu vizinho? E o bêbado falou: -Se eu te falar você não vai acreditar -Fala logo. -Do lado da minha casa. **Enviada por:** ComanCraftS.",
+        "Qual é o desenho favorito do Neymar?... Gravity Falls",
+        "Sabia que H₂O não é água nos EUA?... É water",
+        "Por que o cadeirante não toca fitas?... Porque ele não é um walkman.",
+        "Sabe o que é um anfíbio do meio de dois pães?... Um rã burguer",
+        "É melhor o Brasil não jogar com a Bélgica... Vai que dá Hazard.",
+        "Brasil tem um jogador que pega a arma, engatilha e quando vai apontar desiste... O quase miro (Casemiro)",
+        "Agora que o Brasil tem 4 pontos, um empate sérvia o Brasil",
+        "Como ter a palavra de Deus, segurança e aulas de alemão em casa?... Adote um pastor alemão!",
+        "Na Copa do mundo a Austrália ataca, e a Dina marca.",
+        "Por que o terrorista vive dando bronca no seu filho?... Porque ele é um moleque atentado.",
+        "Por que o policial não gosta de sabão?... Porque o trabalho dele é deter gente.",
+        "Por quê o petróleo foi ao psicólogo?... Porque ele estava no fundo do poço."
     ]
     var piada = Math.floor((Math.random() * piadas.length))
     message.channel.send(piadas[piada]);
