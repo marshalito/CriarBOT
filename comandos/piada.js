@@ -36,7 +36,10 @@ module.exports.run = async(bot, message, args) => {
         "O que acontece a uma Jiboia quando ela não sabe nadar?... Ela Jafunda",
         "Sabe por que o México tem os melhores encanadores do mundo? Porque eles são mexicanos. **Enviada por:** kaueePAPAI.",
         "Por que o pato tem inveja do cachorro? Porque ele tem 4 patas. **Enviada por:** zRowPvP_.",
-        "Uma baleia deu um tiro em uma baleia. No jornal: Baleia baleia baleia. **Enviada por:** kaueePAPAI."
+        "Uma baleia deu um tiro em uma baleia. No jornal: Baleia baleia baleia. **Enviada por:** kaueePAPAI.",
+        "O professor pergunta o Joãozinho: - Arroz é com S ou com Z? E o Joãozinho responde: - Aqui na escola eu não sei, mas lá em casa é com feijão. **Enviada por:** ComanCraftS.",
+        "Se você mandar carta pros cachorros, apenas o hotvailer. **Enviada por:** ComanCraftS.",
+        "Tinha um policial e um bêbado, o policial perguntou pro bêbado: -Onde fica sua casa? E o bêbado respondeu: -Do lado da casa do meu vizinho. E o policial perguntou: -Onde fica a casa do seu vizinho? E o bêbado falou: -Se eu te falar você não vai acreditar -Fala logo. -Do lado da minha casa. **Enviada por:** ComanCraftS."
     ]
     var piada = Math.floor((Math.random() * piadas.length))
     message.channel.send(piadas[piada]);
