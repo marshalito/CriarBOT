@@ -51,7 +51,12 @@ module.exports.run = async(bot, message, args) => {
         "Na Copa do mundo a Austrália ataca, e a Dina marca.",
         "Por que o terrorista vive dando bronca no seu filho?... Porque ele é um moleque atentado.",
         "Por que o policial não gosta de sabão?... Porque o trabalho dele é deter gente.",
-        "Por quê o petróleo foi ao psicólogo?... Porque ele estava no fundo do poço."
+        "Por quê o petróleo foi ao psicólogo?... Porque ele estava no fundo do poço.",
+        "Porque a planta não fala?... Porque ela é mudinha. **Enviada por:** zBiielG0D_.",
+        "Qual o carro indica quando vai chover?... O Celtapreto. **Enviada por:** zBiielG0D_.",
+        "O que entra duro e saí mole?... Macarrão. **Enviada por:** Aleqk.",
+        "Qual planta trabalha muito? A Workídia. **Enviada por:** ComanCraftS.",
+        "Uma impressora perguntou para outra: ESSA FOLHA É MINHA OU É IMPRESSÃO SUA? **Enviada por:** zRow_PvP."
     ]
     var piada = Math.floor((Math.random() * piadas.length))
     message.channel.send(piadas[piada]);
