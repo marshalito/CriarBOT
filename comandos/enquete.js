@@ -18,5 +18,6 @@ ${la}`)
         msg.react('👍');
     });
 }
-
-exports.help = {name: "enquete"}
+module.exports.help = {
+    name: "enquete"
+    }
