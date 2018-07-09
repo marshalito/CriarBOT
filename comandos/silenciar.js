@@ -11,7 +11,7 @@ module.exports.run = async(client, message, args) => {
     if (playmute.hasPermissions("MANAGE_MESSAGES")) return;
     let role = message.guild.roles.find('name', "Silenciado");
     if (!role){
-        message.channel.send(":x: o cargo `Silenciado` não foi identificado, mas meu sistema de última geração o criou! :relaxed:").then(a => a.delete(1600));
+        message.channel.send("Grupo **Silenciado** criado! :relaxed:").then(a => a.delete(1600));
         try {
             role = await message.guild.createRole({
                 name: "Silenciado",
