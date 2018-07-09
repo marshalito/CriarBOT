@@ -17,8 +17,8 @@ module.exports.run = async (client, message, args) => {
   .setColor(role.color)
   .setTimestamp()
   .setFooter(`Anúncio por: ${message.author.username}`, message.author.avatarURL)
-  embed1.react("👍");
-  embed1.react("👎");
+   embed1.react("👍");
+   embed1.react("👎");
   message.channel.send({embed: embed1}); 
 }
 module.exports.help = {
