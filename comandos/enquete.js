@@ -8,8 +8,7 @@ exports.run = async(client, message, args) => {
     message.channel.send('@everyone').then(a=>a.delete(1));
     var embed = new Discord.RichEmbed()
         .setAuthor("📋 ENQUETE!")
-        .setDescription(`\n
-${la}`)
+        .setDescription(`${la}`)
         .setColor(role.color)
         .setTimestamp();
         .setFooter(`Enquete por: ${message.author.username}`, message.author.avatarURL)
