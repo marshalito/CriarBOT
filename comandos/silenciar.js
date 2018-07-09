@@ -34,7 +34,7 @@ module.exports.run = async(client, message, args) => {
     if (!tempo) return message.reply("Tempo não indentificado.");
 
     await(playmute.addRole(role.id));
-    message.reply(`usuário **silenciado** com **sucesso** por ${(tempo)}.`);
+    message.reply(`usuário **silenciado** com **sucesso** por ${ms(tempo)}.`);
 
     setTimeout(function(){
         playmute.removeRole(role.id);
