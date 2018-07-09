@@ -8,7 +8,6 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(sicon)
     .addField("Nome do servidor:", message.guild.name)
     .addField("Criado em:", message.guild.createdAt)
-    .addField("Você entrou em:", message.member.joinedAt)
     .addField("Número de membros:", message.guild.memberCount);
 
     message.channel.send(serverembed);
