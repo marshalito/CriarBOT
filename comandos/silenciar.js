@@ -2,7 +2,7 @@ module.exports.run = async(client, message, args) => {
     const Discord = require('discord.js');
     if (!message.member.hasPermissions("MANAGE_ROLES")) return;
     if (!args[0]){
-        message.reply("**use:** !silenciar [@membro] <tempo>.");
+        message.reply("**use:** !silenciar [@membro].");
         await message.delete();
         return;
     }
@@ -29,11 +29,9 @@ module.exports.run = async(client, message, args) => {
             console.error(a.stack);
         }
     }
-    let tempo = args[1];
-    if (!tempo) return message.reply(":x: Tempo não indentificado.");
 
     await(playmute.addRole(role.id));
-    message.reply(`usuário **silenciado** com **sucesso**.`);
+    message.reply(`usuário **silenciado** com **sucesso**. Utilize !desmutar assim que achar necessário.`);
 
     setTimeout(function(){
         playmute.removeRole(role.id);
