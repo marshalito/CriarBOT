@@ -1,48 +1,46 @@
-const Discord = require("discord.js");
-const ms = require("ms");
-
-module.exports.run = async (bot, message, args) => {
-
-  //!tempmute @user 1s/m/h/d
-
-  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tomute) return message.reply("Usuário não encontrado.");
-  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Permissões insuficientes para punir este membro.");
-  let muterole = message.guild.roles.find(`name`, "muted");
-  //start of create role
-  if(!muterole){
-    try{
-      muterole = await message.guild.createRole({
-        name: "muted",
-        color: "#000000",
-        permissions:[]
-      })
-      message.guild.channels.forEach(async (channel, id) => {
-        await channel.overwritePermissions(muterole, {
-          SEND_MESSAGES: false,
-          ADD_REACTIONS: false
-        });
-      });
-    }catch(e){
-      console.log(e.stack);
+module.exports.run = async(client, message, args) => {
+    const Discord = require('discord.js');
+    if (!message.member.hasPermissions("MANAGE_ROLES")) return;
+    if (!args[0]){
+        message.reply("**use:** !silenciar [@membro] <tempo>.");
+        await message.delete();
+        return;
     }
-  }
-  //end of create role
-  let mutetime = args[1];
-  if(!mutetime) return message.reply("Especifique o tempo de duração da punição.");
+    let playmute = message.mentions.members.first() || message.guild.members.get(args[0]);
+    if (!playmute) return message.reply(":x: Usuário não definido.");
+    if (playmute.hasPermissions("MANAGE_MESSAGES")) return;
+    let role = message.guild.roles.find('name', "Silenciado");
+    if (!role){
+        message.channel.send(":x: o cargo `Silenciado` não foi identificado, mas meu sistema de última geração o criou! :relaxed:").then(a => a.delete(1600));
+        try {
+            role = await message.guild.createRole({
+                name: "Silenciado",
+                color: "#020101",
+                permissions: []
+            });
+            message.guild.channels.forEach(async (channel, id) =>{
+                await channel.overwritePermissions(role, {
+                    SEND_MESSAGES: false,
+                    ADD_REACTION: false,
+                    CONNECT: false
+                });
+            });
+        } catch (a) {
+            console.error(a.stack);
+        }
+    }
+    let tempo = args[1];
+    if (!tempo) return message.reply(":x: Tempo não indentificado.");
 
-  await(tomute.addRole(muterole.id));
-  message.reply(`<@${tomute.id}> foi silenciado com sucesso!`);
+    await(playmute.addRole(role.id));
+    message.reply(`usuário **silenciado** com **sucesso**.`);
 
-  setTimeout(function(){
-    tomute.removeRole(muterole.id);
-    message.channel.send(`<@${tomute.id}> não está mais silenciado.`);
-  }, ms(mutetime));
-
-
-//end of module
+    setTimeout(function(){
+        playmute.removeRole(role.id);
+        message.channel.send(`O usuário <@${playmute.id}> foi desmutado com **sucesso**.`)
+    }, ms(tempo));
+    return await message.delete()
 }
-
 module.exports.help = {
   name: "silenciar"
-}
+};
