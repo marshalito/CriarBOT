@@ -11,18 +11,16 @@ module.exports.run = async (client, message, args) => {
     if (!args1) return message.reply(":x: Digite !anuncio para saber mais");
     message.channel.send('@everyone').then(a=>a.delete(1));
     var role = message.guild.roles.find('name', 'Dream'); //Altera esse Dream caso altere o nome :D
-    const sim  = (reaction, user) => reaction.emoji.name === '👍' && user.id === message.author.id;
-    const nao = (reaction, user) => reaction.emoji.name === '👎' && user.id === message.author.id;
     const embed1 = new Discord.RichEmbed()
   .setAuthor('Enquete...')
   .setDescription(`${args1}`)
   .setColor(role.color)
   .setTimestamp()
   .setFooter(`Anúncio por: ${message.author.username}`, message.author.avatarURL)
+  embed.react("👍");
+  embed.react("👎");
   message.channel.send({embed: embed1}); 
-  msg.react("👍").then(r => {
-  msg.react("👎")})
-};
+}
 module.exports.help = {
     name: "enquete"
     }
