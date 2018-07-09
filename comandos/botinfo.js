@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(bicon)
     .addField("Nome do bot:", bot.user.username)
     .addField("Criado em:", bot.user.createdAt)
-    .addField("Caso tenha alguma dúvida, digite !ajuda.");
+    .addField(`Caso tenha alguma dúvida, digite !ajuda.`);
 
     message.channel.send(botembed);
 }
