@@ -18,8 +18,6 @@ module.exports.run = async (client, message, args) => {
   .setTimestamp()
   .setFooter(`Anúncio por: ${message.author.username}`, message.author.avatarURL)
   message.channel.send({embed: embed1}); 
-  msg.react("👍").then(r => {
-  msg.react("👎")})
 };
 module.exports.help = {
     name: "enquete"
