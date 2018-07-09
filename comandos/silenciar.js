@@ -1,6 +1,6 @@
 module.exports.run = async(client, message, args) => {
     const Discord = require('discord.js');
-    if (!message.member.hasPermissions("MANAGE_ROLES")) return;
+    if (!message.member.hasPermissions("MANAGE_MESSAGES")) return;
     if (!args[0]){
         message.reply("**use:** !silenciar <@membro> [tempo].");
         await message.delete();
