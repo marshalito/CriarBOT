@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args) => {
   if (!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return null;
   if (!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) return message.reply("Eu não tenho a permissão para kickar players!");
   if(!args[0]){
-      message.reply("**use:** !kick <player> <motivo>.");
+      message.reply("**use:** !kickar <@membro> [motivo].");
       return;
   }
   let user = message.mentions.users.first();
@@ -27,5 +27,5 @@ module.exports.run = (bot, message, args) => {
   modlog.send(embed)
 }
 module.exports.help = {
-  name: "kick"
+  name: "kickar"
 };
