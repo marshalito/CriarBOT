@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
     var args1 = message.content.split(" ").slice(1).join(" ");
     if (!args1) return message.reply(":x: Digite !anuncio para saber mais");
     message.channel.send('@everyone').then(a=>a.delete(1));
-    var role = message.guild.roles.find('name', 'taazerBOT'); //Altera esse Dream caso altere o nome :D
+    var role = message.guild.roles.find('name', 'Dream'); //Altera esse Dream caso altere o nome :D
     const embed1 = new Discord.RichEmbed()
   .setAuthor('Enquete...')
   .setDescription(`${args1}`)
