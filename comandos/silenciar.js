@@ -1,5 +1,6 @@
 module.exports.run = async(client, message, args) => {
     const Discord = require('discord.js');
+    const ms = require('ms');
     if (!message.member.hasPermissions("MANAGE_MESSAGES")) return;
     if (!args[0]){
         message.reply("**use:** !silenciar <@membro> [tempo].");
@@ -30,10 +31,10 @@ module.exports.run = async(client, message, args) => {
         }
     }
     let tempo = args[1];
-    if (!tempo) return message.reply(":x: Tempo não indentificado.");
+    if (!tempo) return message.reply("Tempo não indentificado.");
 
     await(playmute.addRole(role.id));
-    message.reply(`usuário **silenciado** com **sucesso**.`);
+    message.reply(`usuário **silenciado** com **sucesso** por ${(tempo)}.`);
 
     setTimeout(function(){
         playmute.removeRole(role.id);
