@@ -2,7 +2,7 @@ module.exports.run = async(client, message, args) => {
     const Discord = require('discord.js');
     if (!message.member.hasPermissions("MANAGE_ROLES")) return;
     if (!args[0]){
-        message.reply("**use:** !tempmute <nick> <tempo>.");
+        message.reply("**use:** !silenciar <@membro> [tempo].");
         await message.delete();
         return;
     }
@@ -37,10 +37,10 @@ module.exports.run = async(client, message, args) => {
 
     setTimeout(function(){
         playmute.removeRole(role.id);
-        message.channel.send(`O usuário <@${playmute.id}> foi desmutado com **sucesso**.`)
+        message.channel.send(`O usuário <@${playmute.id}> não está mais silenciado!`)
     }, ms(tempo));
     return await message.delete()
 }
 module.exports.help = {
-  name: "tempmute"
+  name: "silenciar"
 };
