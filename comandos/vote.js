@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async(client, message, args) => {
+module.exports.run = async (bot, message, args) => {
     if(!message.guild.member(message.author).hasPermission("ADMINISTRADOR")) return;
     if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return;
     let la = message.content.split(" ").slice(1).join(" ");
