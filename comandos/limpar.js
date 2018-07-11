@@ -1,12 +1,15 @@
-const Discord = require('discord.js')
+const Discord = require("discord.js");
+
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return
-    if(!args[0]) return message.channel.send("Inclua um número de mensagens que deseja excluir, **entre** **1** e **9**.");
-    message.channel.bulkDelete(args[0]).then(() => {
-      message.channel.send(`${args[0]} mensagem(s) foram **excluídas**.`).then(msg => msg.delete(5000));
-    });
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Permissões insuficientes.");
+  if(!args[0]) return message.channel.send("Especifique o número de mensagens que devem ser limpadas.");
+  message.channel.bulkDelete(args[0]).then(() => {
+  message.channel.send(`Foram removidas ${args[0]} mensagens.`).then(msg => msg.delete(2000));
+});
+
 }
+
 module.exports.help = {
-    name: "limpar"
-    }
+  name: "limpar"
+}
