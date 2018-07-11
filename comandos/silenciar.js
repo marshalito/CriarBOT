@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) =>{
     if (!message.guild.member(bot.user).hasPermission("ADMINISTRATOR")) return message.channel.send("Eu não possuo a permissão `Administrador`, adicione-a ou descarte este comando.");
     if (!args[0]){
         const msg = new Discord.RichEmbed()
-        .setTitle('Comando: !mute')
+        .setTitle('Comando: !silenciar')
         .setDescription(`Como usar:\n
 **Descrição:** Silenciar membros.
 **Sintaxe:** !silenciar @membro <tempo>.
