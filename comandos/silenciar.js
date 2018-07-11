@@ -48,10 +48,10 @@ module.exports.run = async (bot, message, args) =>{
 **Membro punido:** ${player.user.username}
 **Duração:** ${ms(ms(tempo), { long:true })}
 **Punição aplicada:** Silenciamento`)
-    let modlog = message.guild.channels.find("name", "mod-log");
+    let modlog = message.guild.channels.find("name", "punições");
     if (!modlog) {
         try {
-            await message.guild.CreateChannel("mod-log", {type: 'text'});
+            await message.guild.CreateChannel("punições", {type: 'text'});
             message.channel.send("Canal `mod-log` criado.");
         } catch (e) {
             console.error(e)
