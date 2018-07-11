@@ -5,7 +5,7 @@ module.exports.run = (bot, message, args) => {
   if (!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) return message.reply("Eu não tenho a permissão para banir players!");
   if (!args[0]){
       const msg = new Discord.RichEmbed()
-      .setTitle('Comando: !mute')
+      .setTitle('Comando: !banir')
         .setDescription(`Como usar:\n
 **Descrição:** Banir membros.
 **Sintaxe:** !banir @membro <motivo>.
