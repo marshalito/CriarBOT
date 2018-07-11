@@ -3,10 +3,17 @@ module.exports.run = (bot, message, args) => {
   message.delete().catch(o_O=>{});
   if (!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return null;
   if (!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) return message.reply("Eu não tenho a permissão para banir players!");
-  if(!args[0]){
-      message.reply("**use:** !banir <@membro> [motivo].");
-      return;
-  }
+  if (!args[0]){
+      const msg = new Discord.RichEmbed()
+      .setTitle('Comando: !mute')
+        .setDescription(`Como usar:\n
+**Descrição:** Banir membros.
+**Sintaxe:** !banir @membro <motivo>.
+**Dica:** Insira a prova entre [].`)
+       .setColor('#dcf442');
+       message.channel.send({ embed : msg });
+       return;
+  }    
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
   if (message.mentions.users.size < 1) return message.reply ("você deve mencionar algum usuário!");
