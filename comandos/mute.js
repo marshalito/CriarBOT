@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const ms = require('ms');
-module.exports.run = async (client, message, args) =>{
+module.exports.run = async (bot, message, args) =>{
     if (!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return;
     if (!args[0]){
         const msg = new Discord.RichEmbed()
