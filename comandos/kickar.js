@@ -3,9 +3,16 @@ module.exports.run = (bot, message, args) => {
   message.delete().catch(o_O=>{});
   if (!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return null;
   if (!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) return message.reply("Eu não tenho a permissão para kickar players!");
-  if(!args[0]){
-      message.reply("**use:** !kickar <@membro> [motivo].");
-      return;
+  if (!args[0]){
+      const msg = new Discord.RichEmbed()
+      .setTitle('Comando: !kickar')
+      .setDescription(`Como usar:\n
+**Descrição:** Kickar membros.
+**Sintaxe:** !kickar @membro <motivo>.
+**Dica:** Insira a prova entre [].`)
+        .setColor('#dcf442');
+        message.channel.send({ embed : msg });
+        return;
   }
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
