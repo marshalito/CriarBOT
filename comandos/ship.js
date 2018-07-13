@@ -30,6 +30,7 @@ module.exports.run = (bot, message, args) => {
         "**39% [████.......]** Pode ser, quem sabe... :thinking:",
         "**47% [█████......]** É... talvez, eu acho... :slight_frown:",
         "**53% [██████.....]** Amigos... Mas quem sabe, né... :smirk:",
+        "**80% [█████████..]** Seria surpreendente não ver os dois juntos... :smile:",
         "**100% [████████████]** Casal perfeito, já devem estar casados! :blush:"
         
     ]
