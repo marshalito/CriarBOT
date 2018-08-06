@@ -66,5 +66,5 @@ bot.on('guildMemberAdd', member =>{
   member.sendEmbed(embed);
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN)
 //Coloque o seu token no lugar do que está entre os parênteses ;D
