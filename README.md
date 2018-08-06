@@ -9,4 +9,7 @@ Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns 
 
 Bom, primeiramente eu recomendo que você já tenha os seguintes programas instalados no seu computador, e são eles: **Node.js e Visual Studio Code**.
 
-Após instalar ambos, você deve voltar para o link do repositório
+Após instalar ambos, você deve voltar para o link do repositório e clicar em **Clone or Download**, e em seguida **Download ZIP**.
+
+![screenshot_1](https://user-images.githubusercontent.com/40542263/43734762-23d721bc-998f-11e8-99b4-63cb88802dea.png)
+
