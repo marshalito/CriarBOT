@@ -5,7 +5,7 @@ module.exports.run = async(client, message, args) => {
     .setAuthor('Avatar de '+player.username)
     .setImage(player.displayAvatarURL)
     .setColor("#ff4402")
-    .setFooter("Comando por: " + message.author.username, player.displayAvatarURL);
+    .setFooter("Solicitado por: " + message.author.username, player.displayAvatarURL);
 
     message.channel.send({embed: avatar});
 }
