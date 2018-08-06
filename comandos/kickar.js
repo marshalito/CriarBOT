@@ -2,17 +2,8 @@ const Discord = require ("discord.js");
 module.exports.run = (bot, message, args) => {
   message.delete().catch(o_O=>{});
   if (!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return null;
-  if (!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) return message.reply("Eu não tenho a permissão para kickar players!");
-  if (!args[0]){
-      const msg = new Discord.RichEmbed()
-      .setTitle('Comando: !kickar')
-      .setDescription(`Como usar:\n
-**Descrição:** Kickar membros.
-**Sintaxe:** !kickar @membro <motivo>.
-**Dica:** Insira a prova entre [].`)
-        .setColor('#dcf442');
-        message.channel.send({ embed : msg });
-        return;
+  if (!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) return message.reply("permissões insuficientes.");
+
   }
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
@@ -23,9 +14,7 @@ module.exports.run = (bot, message, args) => {
   message.reply("usuário **kickado** com **sucesso**.");
   let modlog = bot.channels.find("name", "punições");
   if (!modlog) return message.reply("Crie um canal chamado de `punições`, não altere nada do nome.");
-  let role = message.guild.roles.find("name", "Dream")
   var embed = new Discord.RichEmbed()
-        .setColor(role.color)
         .setDescription(`**Autor:** ${message.author.username}
 **Membro punido:** ${user.username}
 **Motivo:** ${reason}
