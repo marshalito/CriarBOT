@@ -26,7 +26,7 @@ Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns 
 
 # Visual Studio Code, o que fazer?
 
-**01.** Primeiramente, é necessário já ter o ![BOT criado](https://discordapp.com/developers) e possuir o **token e client ID** dele em mãos.
+**01.** Primeiramente, é necessário já ter o [BOT criado](https://discordapp.com/developers) e possuir o **token e client ID** dele em mãos.
 
 
 **02.** Após abrir o programa, clique em **File >> Open Folder** e selecione a pasta que você extraiu logo antes.
