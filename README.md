@@ -1,8 +1,15 @@
-# BOT para o seu servidor 🤖
+<h1 align="center">🤖 BOT para o seu servidor 🤖</h1>
 
 Olá, eu desenvolvi um repositório no GitHub somente para arquivar todo o meu processo de criação desse BOT, que tem algumas funções que eu achei bem interessantes e "úteis". 👌
 
 Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns problemas de muitos que desejam criar seu próprio BOT, e por isso decidi iniciar esse projeto! Lembrando que ele foi feito unicamente em **Node.js**, por ser um pouco mais simples de se entender, o que o torna mais fácil também na hora de hospedá-lo em um site e deixá-lo online 24 horas no seu servidor de **Discord**.
+
+**Caso um dia vá usar meu BOT no seu servidor, e goste do meu "projeto", siga-me no Twitter :D**
+
+<p align="center">
+<a href="https://twitter.com/intent/user?screen_name=mrtaazer"><img src="https://img.shields.io/twitter/follow/mrtaazer.svg?style=social&label=Seguir%20mrtaazer"></a>
+</p>
+
 
 
 # Como faço para editar todos esses códigos, não entendi nada!! 😰
@@ -43,3 +50,6 @@ Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns 
 
 
 **05.** Agora, digite no terminal: **node .** (Isso fará que o BOT seja ligado!)
+
+
+**Lembre-se que, para adicionar seu BOT no servidor que desejar, clique [AQUI](https://discordapi.com/permissions.html).**
