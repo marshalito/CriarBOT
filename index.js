@@ -76,4 +76,4 @@ Caso tenha alguma dúvida em relação à rede, dirija-se ao chat #dúvidas para
   member.sendEmbed(embed);
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN)
