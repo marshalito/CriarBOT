@@ -1,6 +1,6 @@
 # BOT para o seu servidor 🤖
 
-Olá, me chamo Vinicius e eu desenvolvi um repositório no GitHub somente para arquivar todo o meu processo de criação desse BOT, que tem algumas funções que eu achei bem interessantes e "úteis". 👌
+Olá, eu desenvolvi um repositório no GitHub somente para arquivar todo o meu processo de criação desse BOT, que tem algumas funções que eu achei bem interessantes e "úteis". 👌
 
 Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns problemas de muitos que desejam criar seu próprio BOT, e por isso decidi iniciar esse projeto! Lembrando que ele foi feito unicamente em **Node.js**, por ser um pouco mais simples de se entender, o que o torna mais fácil também na hora de hospedá-lo em um site e deixá-lo online 24 horas no seu servidor de **Discord**.
 
@@ -31,11 +31,15 @@ Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns 
 
 **02.** Após abrir o programa, clique em **File >> Open Folder** e selecione a pasta que você extraiu logo antes.
 
+![screenshot_3](https://user-images.githubusercontent.com/40542263/43735590-61dbb1f6-9991-11e8-99fe-ccf55ca386a0.png)
+
 
 **03.** Depois de selecionar a pasta, pressione **Ctrl + Crase**.
 
 
 **04.** Em **index.js**, remova "process.env.BOT_TOKEN na última linha, e substitua pelo Token do seu BOT.
+
+![screenshot_4](https://user-images.githubusercontent.com/40542263/43735724-b9c48dca-9991-11e8-91ba-6bcc4ab0b503.png)
 
 
 **05.** Agora, digite no terminal: **node .** (Isso fará que o BOT seja ligado!)
