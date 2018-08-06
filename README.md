@@ -53,3 +53,4 @@ Para você que ainda não entendeu, esse BOT foi desenvolvido para sanar alguns 
 
 
 **Lembre-se que, para adicionar seu BOT no servidor que desejar, clique [AQUI](https://discordapi.com/permissions.html).**
+
